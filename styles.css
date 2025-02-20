@@ -1,0 +1,47 @@
+/* Stile generale del body */
+body {
+    font-family: Arial, sans-serif; /* Font sans-serif per una lettura chiara del testo */
+    background-color: #f4f4f4; /* Sfondo neutro per garantire accessibilità a tutti gli utenti e per non distrarre dal contenuto */
+    margin: 0;
+    padding: 0;
+}
+
+/* Stile per il link di salto al contenuto (di fondamentale importanza per l'accessibilità) */
+.skip-link {
+    position: absolute;
+    top: -40px; /* Nasconde il link fuori dallo schermo */
+    left: 0;
+    background: #0056a1;
+    color: white;
+    padding: 8px;
+    z-index: 100;
+    transition: top 0.3s;
+}
+
+/* Visualizza il link quando ottiene il focus (es. durante la navigazione da tastiera) */
+.skip-link:focus {
+    top: 0;
+}
+
+/* Stile per l'header */
+header {
+    background-color: #0056a1; /* Colore blu per richiamare l'identità visiva del brand */
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Stile per il contenuto principale */
+main {
+    padding: 20px;
+    background: white;
+    margin: 20px;
+    border-radius: 8px; /* Angoli arrotondati per un design moderno e accogliente */
+}
+
+/* Stile per il footer */
+footer {
+    text-align: center;
+    background: #ddd;
+    padding: 10px;
+}
