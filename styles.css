@@ -45,3 +45,35 @@ footer {
     background: #ddd;
     padding: 10px;
 }
+
+/* Contenitore delle card */
+.cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 20px 0;
+}
+
+/* Card dinamiche */
+.card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 15px;
+    margin: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+    flex: 0 0 30%;
+    text-align: center;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+/* Stile per il link all'interno della card */
+.card a {
+    text-decoration: none;
+    color: #0056a1;
+    font-weight: bold;
+}
