@@ -37,9 +37,33 @@
 
     <!-- Footer: contiene le informazioni di copyright -->
     <footer>
-        <p>&copy; 2025 Paolo Agresti. Matricola 0312200899. Tutti i diritti riservati.</p>
-		<p>Università Telematica Pegaso</p>
-		<p>ELABORATO PROGETTUALE - VIETATA LA DIFFUSIONE</p>
+        <p>&copy; 2025</p>
     </footer>
+
+	<script>
+	document.addEventListener("DOMContentLoaded", function() {
+		// Seleziona l'ul presente nella sezione dei report
+		var reportSection = document.querySelector("main section");
+		var ul = reportSection.querySelector("ul");
+		var liElements = ul.querySelectorAll("li");
+		
+		// Crea un nuovo contenitore per le card
+		var cardsContainer = document.createElement("div");
+		cardsContainer.className = "cards-container";
+		
+		// Per ogni <li>, crea una card dinamica
+		liElements.forEach(function(li) {
+			var a = li.querySelector("a");
+			var card = document.createElement("div");
+			card.className = "card";
+			card.appendChild(a);
+			cardsContainer.appendChild(card);
+		});
+		
+		// Sostituisci l'elenco originale con il contenitore delle card
+		ul.parentNode.replaceChild(cardsContainer, ul);
+	});
+	</script>
+
 </body>
 </html>
